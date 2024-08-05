@@ -10,3 +10,4 @@ const Loadable =
   );
 
 export const PostsPage = Loadable(lazy(() => import("../pages/Posts")));
+export const PostDetailPage = Loadable(lazy(() => import("../pages/PostDetail")));

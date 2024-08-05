@@ -1,5 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 
+import { PostList } from "../components/post-list";
 import { useGetPostsQuery } from "../services/post";
 
 const Posts = () => {
@@ -16,7 +17,7 @@ const Posts = () => {
         ) : isLoading ? (
           "Loading..."
         ) : data ? (
-          <>{JSON.stringify(data)}</>
+          <PostList data={data} />
         ) : (
           "No Data"
         )}
