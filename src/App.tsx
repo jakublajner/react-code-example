@@ -1,5 +1,7 @@
 import { Container, CssBaseline, ThemeProvider, Typography } from "@mui/material";
+import { Provider } from "react-redux";
 
+import { store } from "./store";
 import theme from "./theme";
 
 function App() {
@@ -7,11 +9,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Container>
-        <Typography variant="h1" color="primary">
-          Hi there!
-        </Typography>
-      </Container>
+      <Provider store={store}>
+        <Container>
+          <Typography variant="h1" color="primary">
+            Hi there!
+          </Typography>
+        </Container>
+      </Provider>
     </ThemeProvider>
   );
 }
