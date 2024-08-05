@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
+import Header from "./components/header/Header";
 import Routes from "./routes";
 import { store } from "./store";
 import theme from "./theme";
@@ -15,7 +16,10 @@ function App() {
       <Provider store={store}>
         <HelmetProvider>
           <BrowserRouter>
-            <Routes />
+            <>
+              <Header />
+              <Routes />
+            </>
           </BrowserRouter>
         </HelmetProvider>
       </Provider>
