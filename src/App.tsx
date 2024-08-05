@@ -1,6 +1,9 @@
-import { Container, CssBaseline, ThemeProvider, Typography } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
+import Routes from "./routes";
 import { store } from "./store";
 import theme from "./theme";
 
@@ -10,11 +13,11 @@ function App() {
       <CssBaseline />
 
       <Provider store={store}>
-        <Container>
-          <Typography variant="h1" color="primary">
-            Hi there!
-          </Typography>
-        </Container>
+        <HelmetProvider>
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+        </HelmetProvider>
       </Provider>
     </ThemeProvider>
   );
