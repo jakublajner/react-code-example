@@ -28,7 +28,7 @@ export default function Header() {
   const container = window !== undefined ? () => window.document.body : undefined;
   const navItems = [
     { key: "posts", label: "Posts", path: paths.posts },
-    { key: "statisctis", label: "Statistics", path: "#" },
+    { key: "statisctis", label: "Statistics", path: paths.statistics },
   ];
 
   const drawer = (
